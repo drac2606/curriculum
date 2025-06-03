@@ -28,7 +28,7 @@ body {
 header {
     background: #16161a;
     padding: 2rem 0 1rem 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem; /* Antes: 2.5rem */
     box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
 }
 
@@ -42,27 +42,51 @@ h1 {
 }
 
 /* --------- NAV --------- */
+nav {
+    background: #16161a;
+    padding: 1rem 0;
+    position: relative;
+}
+
 nav > ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* O usa flex-start si quieres alineados a la izquierda */
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    gap: 5rem; /* Reduce este valor para acercar los elementos */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav > ul > li {
+    text-align: center;
+    /* Elimina flex: 1 1 0; si no quieres que ocupen todo el ancho */
+}
+
+nav > ul > li:first-child {
+    margin-left: 0;
+}
+
+nav > ul > li:last-child {
+    margin-right: 0;
 }
 
 nav a {
     text-decoration: none;
     color: #fffffe;
     font-weight: 500;
-    padding: 0.3em 0.8em;
+    padding: 0.5em 1.4em; /* Más grandes horizontal y verticalmente */
     border-radius: 8px;
     border: 2px solid #7f5af0;
     background: transparent;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 0 0 0 transparent;
+    position: relative;
+    z-index: 2;
+    font-size: 1.08rem; /* Opcional: ligeramente más grande el texto */
 }
 
 nav a:hover,
@@ -70,6 +94,36 @@ nav a:focus {
     background: #7f5af0;
     color: #fffffe;
     box-shadow: 0 0 0 2px #2cb67d;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #2cb67d;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: 1;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    width: 100%;
+    left: 0;
+}
+
+/* --------- NAV SEPARATOR BAR --------- */
+nav .nav-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    border-radius: 2px;
+    z-index: 1;
 }
 
 /* --------- MAIN --------- */
@@ -99,27 +153,41 @@ section {
     font-weight: 600;
 }
 
+.subtitle-header {
+    text-align: center;
+    color: #7f5af0;
+    font-size: 1rem;   /* Más pequeño */
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
 /* --------- PERFIL FLEX --------- */
 #perfil {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 10rem;
+    justify-content:flex-end
 }
 
 #perfil .perfil-texto {
-    flex: 2 1 300px;
-    min-width: 250px;
+    flex: 2;
+    text-align: justify;
+    margin-left: 1.5rem;
 }
 
 .perfil-foto, #perfil #photo {
+    flex: 0 0 auto;
+    margin-right: 5rem;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    display: block;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(127, 90, 240, 0.15);
     border: 4px solid #7f5af0;
     background: #16161a;
+    display: block;
 }
 
 @media (max-width: 700px) {
@@ -382,4 +450,146 @@ footer {
     font-size: 1rem;
     margin-top: 2rem;
     border-top: 1px solid #72757e;
+}
+
+#proyectos a {
+    color: #2cb67d;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+#proyectos a:hover,
+#proyectos a:focus {
+    color: #2cb67d;
+    text-decoration: underline;
+}
+
+/* --------- NUEVO CÓDIGO --------- */
+nav {
+    background: #16161a;
+    padding: 1rem 0;
+    position: relative;
+}
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav .nav-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+nav a {
+    position: relative;
+    z-index: 2;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #fffffe;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #2cb67d;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: 1;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    width: 100%;
+    left: 0;
+}
+
+/* --------- HABILIDADES FLEX --------- */
+.habilidades-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    justify-content: flex-start;
+}
+
+.habilidades-flex ul {
+    flex: 1 1 250px;
+    margin: 0;
+}
+
+.habilidades-video {
+    flex: 0 0 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.habilidades-video iframe {
+    width: 400px;
+    height: 225px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(127, 90, 240, 0.10);
+    background: #16161a;
+    margin-right: 5rem;
+}
+
+@media (max-width: 900px) {
+    .habilidades-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .habilidades-video {
+        justify-content: flex-start;
+    }
+    .habilidades-video iframe {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* --------- FIN DEL NUEVO CÓDIGO --------- */
+
+.educacion-lista {
+    list-style: disc inside;
+    padding-left: 1.2rem;
+    margin: 0;
+    max-width: 400px;
+}
+
+.educacion-lista li {
+    margin-bottom: 0.2rem;   /* Más espacio entre cada elemento de la lista */
+    line-height: 1.3;
+    display: list-item;
+}
+
+.edu-titulo {
+    color: #2cb67d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    margin-right: 0;   /* Menos espacio entre título y detalle */
+}
+
+.edu-detalle {
+    color: #94a1b2;
+    font-size: 1em;
+    display: block;
+    margin-left: 1.4rem;      /* Alinea verticalmente con el texto del título */
+    margin-bottom: 2rem;        /* Sin espacio extra entre título y detalle */
+    line-height: 1.3;
 }
