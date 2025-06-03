@@ -1,204 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="currículum, CV, experiencia, educación, habilidades">
-    <meta name="description" content="Currículum Vitae de Dario Anchundia">
+    <meta name="keywords" content="CV, Curriculum Vitae, Experiencia, Educación, Habilidades">
+    <meta name="description" content="Curriculum Vitae de Dario Anchundia">
     <meta name="author" content="Dario Anchundia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <title>Currículum Vitae de Dario Anchundia</title>
+    <title>Mi CV</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-
 <body>
     <header>
         <h1>Dario Anchundia</h1>
         <nav>
             <ul>
                 <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#educacion">Educación</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#educacion">Educación</a></li>
                 <li><a href="#referencias">Referencias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="perfil">
-            <h2 class="subtitle">Perfil</h2>
-            <img id="photo" src="https://placehold.co/150x150" alt="Foto de perfil" style="border-radius: 50%;">
+        <!-- PERFIL -->
+        <section id="perfil" style="display: flex; align-items: center; gap: 2.5rem;">
+            <div class="perfil-texto">
+                <h2 class="subtitle">Perfil</h2>
+                <p>
+                    Ingeniero en Computación apasionado por la tecnología y la innovación. Con experiencia en desarrollo web, diseño de interfaces y trabajo en equipo. Me considero una persona proactiva, creativa y orientada a resultados.<br>
+                    <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, urna eu cursus dictum, justo erat cursus enim, nec dictum enim urna nec sapien.</em>
+                </p>
+            </div>
+            <img src="images/f087ce64-b7c1-412c-8005-40420d3c9631.jpeg" alt="Foto de perfil de Dario Anchundia" class="perfil-foto" id="photo">
         </section>
-        <section id="experiencia">
-            <h2 class="subtitle">Experiencia</h2>
-            <!-- Información de experiencia -->
-            <p>Desarrollador Frontend</p>
-        </section>
-        <section id="educacion">
-            <h2 class="subtitle">Educación</h2>
-            <!-- Información de educación -->
-            <p>Ingeniería en Sistemas</p>
-        </section>
+
+        <!-- HABILIDADES -->
         <section id="habilidades">
             <h2 class="subtitle">Habilidades</h2>
-            <!-- Información de habilidades -->
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
+                <li>Desarrollo web (HTML, CSS, JavaScript, React)</li>
+                <li>Diseño UI/UX</li>
+                <li>Trabajo en equipo y liderazgo</li>
+                <li>Resolución de problemas</li>
+                <li>Comunicación efectiva</li>
+                <li>Inglés intermedio</li>
             </ul>
-            <!-- Video de YouTube relacionado a habilidades -->
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/aHYvmY3nV5U"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <iframe width="400" height="225" src="https://www.youtube.com/shorts/AzOLIs2cB6k" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </section>
-        <section id="contacto">
-            <h2 class="subtitle">Contacto</h2>
-            <!-- Información de contacto -->
-            <p>Email:</p>
-            <p>Teléfono:</p>
-            <p>LinkedIn:</p>
-            <p>GitHub:</p>
-            <p>Twitter:</p>
 
-            <!-- Formulario de contacto -->
+        <!-- PROYECTOS -->
+        <section id="proyectos">
+            <h2 class="subtitle">Proyectos</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/darioanchundia/proyecto1" target="_blank" rel="noopener">Sistema de Gestión Académica</a><br>
+                    Plataforma web para la administración de cursos, estudiantes y calificaciones.
+                </li>
+                <li>
+                    <a href="https://github.com/darioanchundia/proyecto2" target="_blank" rel="noopener">App de Tareas Colaborativas</a><br>
+                    Aplicación para la gestión de tareas en equipo con notificaciones y seguimiento de progreso.
+                </li>
+                <li>
+                    <a href="https://github.com/darioanchundia/proyecto3" target="_blank" rel="noopener">Sitio Web Portafolio</a><br>
+                    Portafolio personal con proyectos destacados y formulario de contacto.
+                </li>
+            </ul>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section id="educacion">
+            <h2 class="subtitle">Educación</h2>
+            <ul>
+                <li>
+                    Ingeniería en Computación – ESPOL (2018 - 2023)
+                    <div>Graduado con honores. Participación en proyectos de investigación y desarrollo de software educativo.</div>
+                </li>
+                <li>
+                    Bachiller en Ciencias – Colegio Nacional (2012 - 2018)
+                </li>
+            </ul>
+        </section>
+
+        <!-- REFERENCIAS -->
+        <section id="referencias">
+            <h2 class="subtitle">Referencias</h2>
+            <div class="referencias-grid">
+                <article class="referencia-card">
+                    <p>“Dario es un profesional comprometido y siempre entrega resultados de calidad.”</p>
+                    <div>
+                        Nombre: María Pérez<br>
+                        Cargo: Gerente de Proyectos<br>
+                        María trabajó con Dario durante dos años en el desarrollo de aplicaciones web. Destaca su dedicación y habilidades técnicas como clave para el éxito de los proyectos.
+                    </div>
+                </article>
+                <article class="referencia-card">
+                    <p>“Su capacidad para resolver problemas y trabajar en equipo es destacable.”</p>
+                    <div>
+                        Nombre: Carlos Gómez<br>
+                        Cargo: Líder de Desarrollo<br>
+                        Carlos fue jefe de Dario en varios proyectos de software y resalta su iniciativa y excelente actitud colaborativa.
+                    </div>
+                </article>
+                <article class="referencia-card">
+                    <p>“Recomiendo a Dario por su ética profesional y creatividad.”</p>
+                    <div>
+                        Nombre: Ana Torres<br>
+                        Cargo: Directora de Innovación<br>
+                        Ana comparte que Dario aportó ideas innovadoras y soluciones eficientes, demostrando gran profesionalismo.
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <section id="contacto">
+            <h2 class="subtitle">Información de contacto</h2>
+            <div class="contacto-flex">
+                <div class="contacto-tabla">
+                    <table class="tabla-contacto">
+                        <tr>
+                            <td>Correo:</td>
+                            <td><a href="mailto:dario@email.com" class="contact-link">dario@email.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Teléfono:</td>
+                            <td><span class="contact-link">0999999999</span></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub:</td>
+                            <td><a href="https://github.com/darioanchundia" target="_blank" rel="noopener" class="contact-link">github.com/darioanchundia</a></td>
+                        </tr>
+                        <tr>
+                            <td>LinkedIn:</td>
+                            <td><a href="https://linkedin.com/in/darioanchundia" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/darioanchundia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Instagram:</td>
+                            <td><a href="https://instagram.com/darioanchundia" target="_blank" rel="noopener" class="contact-link">@darioanchundia</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contacto-mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.3248985049065!2d-79.96772873046875!3d-2.147932899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2e7e2e9e2b%3A0x3e5a1f8a604543d6!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1717350000000!5m2!1ses-419!2sec" 
+                        width="100%" 
+                        height="300" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="contactame">
+            <h2 class="subtitle">Contáctame</h2>
             <form action="#" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
-
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo" required>
-                    <option value="" disabled selected>Seleccione una opción</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="trabajo">Oferta de trabajo</option>
-                    <option value="otro">Otro</option>
-                </select>
-
-                <fieldset>
-                    <legend>¿Cómo prefieres ser contactado?</legend>
-                    <input type="radio" id="contacto_email" name="preferencia_contacto" value="email" required>
-                    <label for="contacto_email">Email</label>
-                    <input type="radio" id="contacto_telefono" name="preferencia_contacto" value="telefono" required>
-                    <label for="contacto_telefono">Teléfono</label>
-                </fieldset>
-
-                <label for="lenguajes">Lenguajes de interés:</label>
-                <select id="lenguajes" name="lenguajes[]" multiple required>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="react">React</option>
-                    <option value="nodejs">Node.js</option>
-                </select>
-
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
                 <button type="submit">Enviar</button>
             </form>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.0734424949607!2d-79.96772873040997!3d-2.1479348999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c1b2e1e3c7%3A0x8e7e9c7c7e7e9c7c!2sEscuela%20Superior%20Politécnica%20del%20Litoral!5e0!3m2!1ses!2sec!4v1716134400000!5m2!1ses!2sec"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section id="semantica">
-            <h2 class="subtitle">Recomendación de uso de etiquetas semánticas</h2>
-            <p>
-                Es recomendable utilizar etiquetas semánticas como <strong>&lt;header&gt;</strong>,
-                <strong>&lt;nav&gt;</strong>, <strong>&lt;main&gt;</strong>, <strong>&lt;section&gt;</strong>,
-                <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong> y <strong>&lt;footer&gt;</strong>
-                para estructurar el contenido de tu página web y mejorar la accesibilidad y el SEO. Más información
-                en
-                <a href="https://developer.mozilla.org/es/docs/Glossary/Semantics" target="_blank">MDN Web Docs</a>.
-            </p>
-
-            <h3>Lista ordenada de pasos para mejorar la semántica:</h3>
-            <ol>
-                <li>Identificar las secciones principales del contenido.</li>
-                <li>Utilizar etiquetas semánticas adecuadas para cada sección.</li>
-                <li>Agregar descripciones y títulos claros.</li>
-            </ol>
-
-            <h3>Lista no ordenada de etiquetas semánticas útiles:</h3>
-            <ul>
-                <li>&lt;header&gt;</li>
-                <li>&lt;nav&gt;</li>
-                <li>&lt;main&gt;</li>
-                <li>&lt;section&gt;</li>
-                <li>&lt;footer&gt;</li>
-            </ul>
-
-            <h3>Tabla de etiquetas semánticas y su uso</h3>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Etiqueta</th>
-                    <th>Uso principal</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td>&lt;header&gt;</td>
-                    <td>Encabezado de la página o sección</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>&lt;nav&gt;</td>
-                    <td>Menú de navegación</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>&lt;footer&gt;</td>
-                    <td>Pie de página</td>
-                </tr>
-            </table>
-        </section>
-        <section id="referencias">
-            <h2 class="subtitle">Referencias</h2>
-            <article>
-                <blockquote>
-                    "Dario es un profesional comprometido y siempre dispuesto a aportar soluciones innovadoras."
-                </blockquote>
-                <p>
-                    <strong>María López</strong><br>
-                    Gerente de Proyectos en TechSolutions<br>
-                    Trabajó con Dario durante 2 años liderando equipos de desarrollo frontend y destaca su capacidad
-                    para trabajar bajo presión y cumplir objetivos.
-                </p>
-            </article>
-            <article>
-                <blockquote>
-                    "Su conocimiento en tecnologías web y su actitud colaborativa marcaron la diferencia en nuestro
-                    equipo."
-                </blockquote>
-                <p>
-                    <strong>Carlos Pérez</strong><br>
-                    Jefe de Desarrollo en WebInnovate<br>
-                    Colaboró con Dario en varios proyectos de aplicaciones web, resaltando su responsabilidad y
-                    habilidades técnicas.
-                </p>
-            </article>
-            <article>
-                <blockquote>
-                    "Siempre mostró iniciativa y una gran disposición para aprender y compartir conocimientos."
-                </blockquote>
-                <p>
-                    <strong>Ana Torres</strong><br>
-                    Líder de Equipo en DigitalSoft<br>
-                    Ana destaca la ética profesional de Dario y su capacidad para adaptarse rápidamente a nuevos
-                    retos tecnológicos.
-                </p>
-            </article>
         </section>
     </main>
     <footer>
-        <!-- Información de pie de página -->
         &copy; 2025 Dario Anchundia
     </footer>
 </body>
-
 </html>
