@@ -6,6 +6,10 @@
     <meta name="description" content="Curriculum Vitae de Dario Anchundia">
     <meta name="author" content="Dario Anchundia">
     <title>Mi CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
@@ -33,7 +37,9 @@
                     Actualmente busco oportunidades para aplicar mis habilidades en proyectos desafiantes y contribuir al éxito de un equipo dinámico. Me interesa especialmente el desarrollo de software educativo y aplicaciones que mejoren la experiencia del usuario.
                 </p>
             </div>
-            <img src="./images/f087ce64-b7c1-412c-8005-40420d3c9631.jpeg" alt="Foto de perfil de Dario Anchundia" class="perfil-foto" id="photo">
+            <figure class="perfil-foto-container">
+                <img src="./images/f087ce64-b7c1-412c-8005-40420d3c9631.jpeg" alt="Foto de perfil de Dario Anchundia" class="perfil-foto" id="photo">
+            </figure>
         </section>
 
         <!-- HABILIDADES -->
@@ -48,9 +54,9 @@
                     <li>Comunicación efectiva</li>
                     <li>Inglés intermedio</li>
                 </ul>
-                <div class="habilidades-video">
+                <figure class="habilidades-video">
                     <iframe src="https://www.youtube.com/embed/sLexw-z13Fo" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                </figure>
             </div>
         </section>
 
@@ -76,20 +82,36 @@
         <!-- EDUCACIÓN -->
         <section id="educacion">
             <h2 class="subtitle">Educación</h2>
-            <ul class="educacion-lista">
-                <li>
-                    <span class="edu-titulo">Bachiller en Ciencias</span>
-                </li>
-                <span class="edu-detalle">Unidad Educativa Albert Einstein (2015 - 2018)</span>
-                <li>
-                    <span class="edu-titulo">Ingeniería Mecanica (Incompleta) </span>                    
-                </li>
-                <span class="edu-detalle">ESPOL (2018 - 2020)</span>
-                <li>
-                    <span class="edu-titulo">Ingeniería en Computación</span>                    
-                </li>
-                <span class="edu-detalle">ESPOL (2023 - Actualidad)</span>
-            </ul>
+            <div class="educacion-timeline">
+                <div class="educacion-item">
+                    <div class="educacion-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="educacion-content">
+                        <h3 class="edu-titulo">Bachiller en Ciencias</h3>
+                        <p class="edu-institucion">Unidad Educativa Albert Einstein</p>
+                        <p class="edu-periodo">2015 - 2018</p>
+                        <div class="edu-status">
+                            <span class="status-badge status-completado">Completado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educacion-item">
+                    <div class="educacion-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="educacion-content">
+                        <h3 class="edu-titulo">Ingeniería en Computación</h3>
+                        <p class="edu-institucion">Escuela Superior Politécnica del Litoral (ESPOL)</p>
+                        <p class="edu-periodo">2023 - Actualidad</p>
+                        <div class="edu-status">
+                            <span class="status-badge status-activo">En curso</span>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
         </section>
 
         <!-- REFERENCIAS -->
@@ -97,7 +119,7 @@
             <h2 class="subtitle">Referencias</h2>
             <div class="referencias-grid">
                 <article class="referencia-card">
-                    <p>“Dario es un profesional comprometido y siempre entrega resultados de calidad.”</p>
+                    <p>"Dario es un profesional comprometido y siempre entrega resultados de calidad."</p>
                     <div>
                         Nombre: María Pérez<br>
                         Cargo: Gerente de Proyectos<br>
@@ -105,7 +127,7 @@
                     </div>
                 </article>
                 <article class="referencia-card">
-                    <p>“Su capacidad para resolver problemas y trabajar en equipo es destacable.”</p>
+                    <p>"Su capacidad para resolver problemas y trabajar en equipo es destacable."</p>
                     <div>
                         Nombre: Carlos Gómez<br>
                         Cargo: Líder de Desarrollo<br>
@@ -113,7 +135,7 @@
                     </div>
                 </article>
                 <article class="referencia-card">
-                    <p>“Recomiendo a Dario por su ética profesional y creatividad.”</p>
+                    <p>"Recomiendo a Dario por su ética profesional y creatividad."</p>
                     <div>
                         Nombre: Ana Torres<br>
                         Cargo: Directora de Innovación<br>
@@ -127,31 +149,59 @@
         <section id="contacto">
             <h2 class="subtitle">Información de contacto</h2>
             <div class="contacto-flex">
-                <div class="contacto-tabla">
-                    <table class="tabla-contacto">
-                        <tr>
-                            <td>Correo:</td>
-                            <td><a href="mailto:daancobo@espol.edu.ec" class="contact-link">daancobo@espol.edu.ec</a></td>
-                        </tr>
-                        <tr>
-                            <td>Teléfono:</td>
-                            <td><span class="contact-link">+593 960012519</span></td>
-                        </tr>
-                        <tr>
-                            <td>GitHub:</td>
-                            <td><a href="https://github.com/drac2606" target="_blank" rel="noopener" class="contact-link">github.com/drac2606</a></td>
-                        </tr>
-                        <tr>
-                            <td>LinkedIn:</td>
-                            <td><a href="https://www.linkedin.com/in/dario-anchundia-cobo-7799042a6/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/dario-anchundia-cobo-7799042a6</a></td>
-                        </tr>
-                        <tr>
-                            <td>Instagram:</td>
-                            <td><a href="https://instagram.com/eldoktor024" target="_blank" rel="noopener" class="contact-link">@eldoktor024</a></td>
-                        </tr>
-                    </table>
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacto-details">
+                            <h4>Correo Electrónico</h4>
+                            <a href="mailto:daancobo@espol.edu.ec" class="contact-link">daancobo@espol.edu.ec</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacto-details">
+                            <h4>Teléfono</h4>
+                            <span class="contact-link">+593 960012519</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contacto-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/drac2606" target="_blank" rel="noopener" class="contact-link">github.com/drac2606</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contacto-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/dario-anchundia-cobo-7799042a6/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/dario-anchundia-cobo-7799042a6</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contacto-details">
+                            <h4>Instagram</h4>
+                            <a href="https://instagram.com/eldoktor024" target="_blank" rel="noopener" class="contact-link">@eldoktor024</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="contacto-mapa">
+                
+                <figure class="contacto-mapa">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.3248985049065!2d-79.96772873046875!3d-2.147932899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2e7e2e9e2b%3A0x3e5a1f8a604543d6!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1717350000000!5m2!1ses-419!2sec" 
                         width="100%" 
@@ -160,7 +210,7 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
+                </figure>
             </div>
         </section>
         <section id="contactame">
