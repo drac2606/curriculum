@@ -589,7 +589,7 @@ nav a:focus::after {
     color: #94a1b2;
     font-size: 1em;
     display: block;
-    margin-left: 1.4rem;      /* Alinea verticalmente con el texto del título */
+    margin-left: 1em;      /* Alinea verticalmente con el texto del título */
     margin-bottom: 2rem;        /* Sin espacio extra entre título y detalle */
     line-height: 1.3;
 }
